@@ -40,7 +40,16 @@ public class LoginAT {
    @Test
    public void navigateToMyReplicon() {
 	   driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@aria-label='My Replicon']"))).click();
-       driver.quit();
    }
+  @Test
+   public void TimeEntry() {
+	   driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@aria-label='Add New TimeLine']"))).click();
+       driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day dayOff']/input)[1]"))).sendKeys("8");
+       driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day dayOff']/input)[2]"))).sendKeys("8");
+       driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day dayOff']/input)[3]"))).sendKeys("8");
+       driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day dayOff']/input)[4]"))).sendKeys("8");
+       driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day dayOff']/input)[5]"))).sendKeys("8");
+       driver.findElement(By.xpath("//button[@class='important']")).click();
+  }
   
 }

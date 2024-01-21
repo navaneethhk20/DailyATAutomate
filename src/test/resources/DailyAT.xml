@@ -7,14 +7,8 @@
 			  <methods>
 				<include name="launch"/>  
 				<include name="enterLoginDetails"/> 
-				<include name="verifyLogin"/>  
-			  </methods>
-   </class>
-   <class name="myAT.LoginAT">
-			  <methods>
-				<include name="launch"/>  
-				<include name="enterLoginDetails"/> 
 				<include name="navigateToMyReplicon"/>  
+				<include name="TimeEntry"/> 
 			  </methods>
 			  </class>
     </classes>
