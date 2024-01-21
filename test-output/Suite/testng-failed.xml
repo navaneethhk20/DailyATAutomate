@@ -6,6 +6,7 @@
       <class name="myAT.LoginAT">
         <methods>
           <include name="verifyLogin"/>
+          <include name="enterLoginDetails"/>
         </methods>
       </class> <!-- myAT.LoginAT -->
     </classes>
