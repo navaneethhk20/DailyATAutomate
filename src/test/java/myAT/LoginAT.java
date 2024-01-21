@@ -42,4 +42,5 @@ public class LoginAT {
 	   driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@aria-label='My Replicon']"))).click();
        driver.quit();
    }
+  
 }
