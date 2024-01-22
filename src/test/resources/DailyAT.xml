@@ -11,6 +11,15 @@
 				<include name="TimeEntry"/> 
 			  </methods>
 			  </class>
-    </classes>
+	</classes>
+	<classes>
+		<class name ="cleanTest.CleanTests">
+		<methods>
+			<include name = "launch"/> 
+			<include name = "enterLoginDetails"/> 
+			<include name = "navigateTOPayroll"/> 
+		</methods>
+	</class>
+	</classes>
   </test> 
 </suite> 

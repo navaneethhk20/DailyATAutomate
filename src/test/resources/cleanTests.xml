@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite Clean">
+  <test  name="Test Clean">
+    <classes>
+      <class name = "cleanTest.CleanTests">
+		  <methods>
+			<include name = "launch"/> 
+			<include name = "enterLoginDetails"/> 
+			<include name = "navigateTOPayroll"/> 
+		  </methods>  
+	  </class>
+    </classes>
+  </test> 
+</suite> 
