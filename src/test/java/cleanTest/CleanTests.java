@@ -20,14 +20,14 @@ public class CleanTests {
 	WebDriver driver = new ChromeDriver();
 	WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(10000));
 	
-	@Test
+	@Test(priority=1)
 	public void launch() {
 		WebDriverManager.chromedriver().setup();
 		driver.get("https://login-so.replicon.com");
 		driver.manage().window().maximize();	
 		
 	}
-	@Test
+	@Test(priority=2)
 	public void enterLoginDetails() {
 		driver.findElement(By.id("CompanyNameTextBox")).sendKeys("navneeth1");
 		driver.findElement(By.id("NextButton")).click();
@@ -35,7 +35,7 @@ public class CleanTests {
         driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("PasswordTextBox"))).sendKeys("Replicon@123");
 		driver.findElement(By.id("LoginButton")).click();
 	}
-    @Test
+    @Test(priority=3)
 	public void navigateTOPayroll() {
 	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@aria-label='Payroll']"))).click();
 	//driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='itslmpumtext']"))).sendKeys("testuser1");
