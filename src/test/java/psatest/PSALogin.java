@@ -30,10 +30,12 @@ public class PSALogin {
 		driver.get("https://polarislogin-so.replicon.com/");
 		driver.manage().window().maximize();
 		softAssert.assertEquals(actualTitle, expectedTitle);
-		//softAssert.assertEquals(actualname, expectedname);	
+		//softAssert.assertEquals(actualname, expectedname);
+		
+//Login as basic user and logout		
 	}
 	@Test
-    public void Login()
+    public void Login1()
     {
     driver.findElement(By.id("CompanyNameTextBox")).sendKeys("Apollopsa2");
     driver.findElement(By.id("NextButton")).click();
@@ -42,8 +44,22 @@ public class PSALogin {
     driver.findElement(By.id("LoginButton")).click(); 
     driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='profile-menu-icon']"))).click();
     driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='MuiListItemText-root MuiListItemText-dense']/span)[5]"))).click();
-    driver.close();
+    
     }
-	
+//Login as supervisor and logout
+	@Test
+	public void Login2() 
+	{
+		driver.navigate().refresh();
+		driver.findElement(By.id("CompanyNameTextBox")).clear();
+		//driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//i[@id='ClearCompanyNameIcon']"))).click();
+		driver.findElement(By.id("CompanyNameTextBox")).sendKeys("Apollopsa2");
+	    driver.findElement(By.id("NextButton")).click();
+	    driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("LoginNameTextBox"))).sendKeys("sup1");
+	    driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("PasswordTextBox"))).sendKeys("Replicon@123");
+	    driver.findElement(By.id("LoginButton")).click(); 
+	    driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='profile-menu-icon']"))).click();
+	    driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='MuiListItemText-root MuiListItemText-dense']/span)[5]"))).click();
+	}
 	
 }

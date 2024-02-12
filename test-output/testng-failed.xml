@@ -5,8 +5,8 @@
     <classes>
       <class name="psatest.PSALogin">
         <methods>
+          <include name="Login2"/>
           <include name="Launch"/>
-          <include name="Login"/>
         </methods>
       </class> <!-- psatest.PSALogin -->
     </classes>
