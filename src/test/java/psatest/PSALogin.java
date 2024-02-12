@@ -40,34 +40,10 @@ public class PSALogin {
     driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("LoginNameTextBox"))).sendKeys("usertest1");
     driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("PasswordTextBox"))).sendKeys("Replicon@123");
     driver.findElement(By.id("LoginButton")).click(); 
+    driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='profile-menu-icon']"))).click();
+    driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='MuiListItemText-root MuiListItemText-dense']/span)[5]"))).click();
+    driver.close();
     }
-	@Test
-	public void TimeSheet()
-	{
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorInherit']/span)[1]"))).click();
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("add-new-timeline']"))).sendKeys(Keys.ENTER);
-	driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day']/input)[1]"))).sendKeys("8");   
-	driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day']/input)[2]"))).sendKeys("8");
-	driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day']/input)[3]"))).sendKeys("8");
-	driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day']/input)[4]"))).sendKeys("8");
-	driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//td[@class='day']/input)[5]"))).sendKeys("8");
-	driver.findElement(By.xpath("//button[@aria-label='Submit for Approval']")).click();
-	}
-	@Test
-    public void TimeOffSubmit()
-    { 
-   	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorInherit']/span)[3]"))).click();
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("bookTimeOffBtn"))).click();
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("timeOffSubmit"))).click();
-	driver.close();
-	}
-	@Test
-	public void Expense()
-	{
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class='MuiButtonBase-root MuiTab-root MuiTab-textColorInherit']/span)[6]"))).click();
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("addNewExpenseButton"))).click();
-	driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("expenseDescription"))).sendKeys("tets123");
-	driver.findElement(By.xpath("(//td[@class='m']/button)[1]")).click();
-	}
+	
 	
 }
